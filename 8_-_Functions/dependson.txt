@@ -1,0 +1,4 @@
+priceR
+rvest
+stringi
+dplyr
