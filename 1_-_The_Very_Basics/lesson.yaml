@@ -27,7 +27,7 @@
 
 - Class: text
   Output: If at any point you'd like more information on a particular topic related
-    to R, you can type help.start() at the prompt (this symbol < ), which will open a menu of resources
+    to R, you can type help.start() at the prompt (this symbol > ), which will open a menu of resources
     (either within RStudio or your default web browser, depending on your setup).
     Alternatively, a simple web search often yields the answer you're looking for.  Because R is free and open source, you can rest assured that someone on the internet has asked, and had answered, the exact question you have.
 
