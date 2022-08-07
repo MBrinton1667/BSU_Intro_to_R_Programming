@@ -25,7 +25,7 @@
   AnswerTests: omnitest(correctExpr='avgusdrmb()')
   
 - Class: text
-  Output:  Cool stuff!  Now for the main lesson.
+  Output:  This function worked as of August 7 2022 and hopefully it still does.  Cool stuff!  Now for the main lesson.
 
 - Class: text
   Output: "If you've worked through any other part of this course, you've probably
