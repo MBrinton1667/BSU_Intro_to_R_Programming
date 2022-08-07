@@ -104,7 +104,7 @@
     is not required, but helps make your code less cluttered and more readable.
 
 - Class: cmd_question
-  Output: When I first started with R, the length() function just didn't click for a long time.  Just for practice, and to hopefully prevent you from going down my path, type length(z)
+  Output: When I first started with R, the length() function didn't click for a long time.  Just for practice, and to hopefully prevent you from going down my path, type length(z)
   CorrectAnswer: length(z)
   AnswerTests: omnitest(correctExpr = 'length(z)')
 

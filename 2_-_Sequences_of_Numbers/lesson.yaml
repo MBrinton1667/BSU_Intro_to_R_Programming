@@ -7,7 +7,7 @@
   Version: 2.4.5
 
 - Class: text
-  Output: In this lesson, you'll learn how to create sequences of numbers in R. This can be especially when building datasets or recording data in R.
+  Output: In this lesson, you'll learn how to create sequences of numbers in R. This can be especially helpful when building datasets or recording data in R.
 
 - Class: cmd_question
   Output: The simplest way to create a sequence of numbers in R is by using the `:`
@@ -188,7 +188,7 @@
 
 - Class: cmd_question
   Output:  "Time to make our dataset!  Type data.frame(Subject_ID, height) and look at the pretty, and anonymous, dataset you just created."
-  CorrectAnswer: Subject_ID <- data.frame(Subject_ID, height)
+  CorrectAnswer: data.frame(Subject_ID, height)
   AnswerTests: omnitest(correctExpr='data.frame(Subject_ID, height')
   Hint: "Make sure to check your capitalization, spelling, commas, and parentheses."
   
