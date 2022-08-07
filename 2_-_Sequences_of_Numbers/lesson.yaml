@@ -189,7 +189,7 @@
 - Class: cmd_question
   Output:  "Time to make our dataset!  Type data.frame(Subject_ID, height) and look at the pretty, and anonymous, dataset you just created."
   CorrectAnswer: data.frame(Subject_ID, height)
-  AnswerTests: omnitest(correctExpr='data.frame(Subject_ID, height')
+  AnswerTests: omnitest(correctExpr='data.frame(Subject_ID, height)')
   Hint: "Make sure to check your capitalization, spelling, commas, and parentheses."
   
 - Class: text
@@ -202,7 +202,7 @@
   Hint: "Make sure to check your capitalization, spelling, commas, and parentheses."
   
 - Class: text
-  Output:  "Depending on what order your data is recorded, you may need to use time instead like so: rep(c(0, 1), times = 10).  This would alternate handedness."
+  Output:  "Depending on what order your data is recorded, you may need to use times instead like so: rep(c(0, 1), times = 10).  This would alternate handedness."
   
 - Class: cmd_question
   Output:  "Wrap it all up in a dataset bow and while we're at it, let R know that you want your 'hand' variable to be coded as a factor for further analysis.  Type data.frame(Subject_ID, as.factor(hand), height)"
