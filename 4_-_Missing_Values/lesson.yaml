@@ -120,7 +120,7 @@
 - Class: cmd_question
   Output: "Let's say we want to calculate the mean for our new variable.  Go ahead and type mean(data)."
   CorrectAnswer: mean(data)
-  AnswerTests: omnitest(correctExpr='mean(data')
+  AnswerTests: omnitest(correctExpr='mean(data)')
   Hint: Check your spelling and symbols.
   
 - Class: text
