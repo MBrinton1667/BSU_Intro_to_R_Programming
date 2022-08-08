@@ -134,7 +134,7 @@
   Output: There are some pretty obvious differences here. If it were me, I would say this easily warrants running further tests.  It also tells me it is not worth combining the values for green plants since their values are nowhere near similar to each other. If you're curious, there *is* a statistically significant difference between plant colors when it comes to their pH_Max, F(5, 826) = 6.926, p < .001.
   
 - Class: cmd_question
-  Output: Now do the same thing but use tapply() to see if there is a difference in Temp_Min_F is different depending on the Foliage_Color of the plant.
+  Output: Now do the same thing but use tapply() to see if there is a difference in Temp_Min_F depending on the Foliage_Color of the plant.  For any stats nerds out there since Temp_Min_F *depends* on Foliage_Color, Temp_Min_F is the *dependent* variable.
   CorrectAnswer: tapply(plants$Temp_Min_F, plants$Foliage_Color, mean, na.rm = T)
   AnswerTests: omnitest(correctExpr="tapply(plants$Temp_Min_F, plants$Foliage_Color, mean, na.rm = T)")
   Hint:  All you need to do is replace plants$pH_Max from the previous line of code with plants$Temp_Min_F 
