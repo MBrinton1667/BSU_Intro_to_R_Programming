@@ -34,7 +34,7 @@
   Output: I find it more helpful to just view the entire dataset in the top-left window like we've done several times throughout the course.  This is helpful if, like me, you have a smaller computer screen and don't want all of your results smashed into the bottom-left console.  You would do this with -- View(flags).  We won't do it now, just remember the option.
 
 - Class: cmd_question
-  Output: You may need to scroll up to see all of the output. Now, let's check out the dimensions of the dataset using dim(flags).
+  Output: Now, let's check out the dimensions of the dataset using dim(flags).
   CorrectAnswer: dim(flags)
   AnswerTests: omnitest(correctExpr='dim(flags)')
   Hint: Type dim(flags) to view the dimensions of the dataset.
@@ -279,7 +279,7 @@
   
 - Class: cmd_question
   Output: Now let's do it for Summer.  Now would be a good time to hit the up arrow key and just replace any mention of Spring, with Summer. Type -- Summer <- plants[which(str_detect(plants$Active_Growth_Period, "Summer")), c(5:8, 10)]
-  CorrectAnswer: Summer <- plants[which(str_detect(plants$Active_Growth_Period, "Summer")),]
+  CorrectAnswer: Summer <- plants[which(str_detect(plants$Active_Growth_Period, "Summer")), c(5:8, 10)]
   AnswerTests: omnitest(correctExpr='Summer <- plants[which(str_detect(plants$Active_Growth_Period, "Summer")), c(5:8, 10)]')
 
 - Class: cmd_question
@@ -289,8 +289,8 @@
   
 - Class: cmd_question
   Output: Lastly, let's use sapply() to take the means of the variables we're interested in.  sapply() can be applied all at once by executing the following command -- sapply(c(Spring, Summer, Fall), mean, na.rm = T) --  as discussed in an earlier lesson, the mean() function won't work if there's any missing data.  That's why you must add na.rm = T.
-  CorrectAnswer: g command -- sapply(c(Spring, Summer, Fall), mean, na.rm = T)
-  AnswerTests: omnitest(correctExpr='g command -- sapply(c(Spring, Summer, Fall), mean, na.rm = T)]')
+  CorrectAnswer: sapply(c(Spring, Summer, Fall), mean, na.rm = T)
+  AnswerTests: omnitest(correctExpr='sapply(c(Spring, Summer, Fall), mean, na.rm = T)')
   
 - Class: text
   Output: Even though there was some overlap in terms of our variable selection there is still a large difference between Minimum Temperature for the 3 growth periods.  Good work!
