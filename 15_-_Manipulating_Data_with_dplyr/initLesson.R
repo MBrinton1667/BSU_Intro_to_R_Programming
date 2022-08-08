@@ -15,8 +15,8 @@
 
 # Make path to csv available to user
 path2csv <- file.path(.get_course_path(),
-                      'Getting_and_Cleaning_Data',
-                      'Manipulating_Data_with_dplyr',
+                      'BSU_Intro_to_R_Programming',
+                      '15_-_Manipulating_Data_with_dplyr',
                       '2014-07-08.csv')
 
 # Create datasets for user. We don't advertise that we're
