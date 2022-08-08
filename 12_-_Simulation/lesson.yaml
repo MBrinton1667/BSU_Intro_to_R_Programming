@@ -213,7 +213,7 @@
   AnswerTests: omnitest('hist(fair_dice, col = "blue", add = T)')
 
 - Class: text
-  Output: Yup! There is certainly some discrepancies there.  It looks like your friend played with dice weight to land on the higher numbers of the dice.
+  Output: Yup! There are certainly some discrepancies there.  It looks like your friend played with dice rigged to land on the higher numbers of the dice.
 
 - Class: text
   Output:  "This next one is fun.  I attached a dataset that represents the male to female ratio of 58 cultures around the world.  If you don't believe me navigate to: https://d-place.org/parameters/SCCS1689#2/14.2/149.0"
