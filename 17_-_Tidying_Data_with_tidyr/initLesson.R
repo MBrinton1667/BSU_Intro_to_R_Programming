@@ -60,7 +60,7 @@ students2 <- data.frame(
 
 .lesson_path <- file.path(.get_course_path(),
                           'BSU_Intro_to_R_Programming',
-                          '17_-_Tidying_Data_with_dplyr')
+                          '17_-_Tidying_Data_with_tidyr')
 
 .path2s3 <- file.path(.lesson_path, 'students3.csv')
 students3 <- read.csv(.path2s3, na.strings = "", stringsAsFactors = FALSE)
