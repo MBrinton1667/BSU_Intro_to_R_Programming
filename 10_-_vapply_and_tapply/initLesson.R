@@ -51,3 +51,9 @@ names(plants) <- c('Scientific_Name', 'Duration', 'Active_Growth_Period',
 plants$Duration <- factor(plants$Duration)
 plants$Active_Growth_Period <- factor(plants$Active_Growth_Period)
 plants$Foliage_Color <- factor(plants$Foliage_Color)
+
+# Dummy function to advance user past question for which 
+# correct answer yields an error
+ok <- function() {
+  invisible()
+}
