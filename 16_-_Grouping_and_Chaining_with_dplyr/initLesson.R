@@ -5,9 +5,8 @@
   )
 }
 
-
 # Make data available to user in a data frame
-path2csv <- file.path(.get_course_path(),
+.path2csv <- file.path(.get_course_path(),
                       'BSU_Intro_to_R_Programming',
                       '16_-_Grouping_and_Chaining_with_dplyr',
                       '2014-07-08.csv')
