@@ -10,10 +10,19 @@
   Output: One of the greatest strengths of R, relative to other programming languages, is the ease with which we can create publication-quality graphics. In this lesson, you'll learn about base graphics in R. 
 
 - Class: text
-  Output: We do not cover the more advanced portions of graphics in R in this lesson. These include lattice, ggplot2 and ggvis.
+  Output: We do not cover the more advanced portions of graphics in R in this lesson. These include lattice, ggplot2, ggvis, GGally, and my favorite ggpubr.
 
 - Class: text
   Output: There is a school of thought that this approach is backwards, that we should teach ggplot2 first. See http://varianceexplained.org/r/teach_ggplot2_to_beginners/ for an outline of this view.
+  
+- Class: text
+  Output: I, however, agree with the original author here and think base R graphics should be taught first.  At the very least it is a much quicker way to get a feel for your data than creating a complex ggplot.
+  
+- Class: text
+  Output: I personally use base R graphics to quickly determine the shape of a distribution, whether variables are linearly related, check for heteroscedasticity (definitely had to google how to spell that), or to determine if it's worth it in the first place to create a fancy ggplot of the data.
+  
+- Class: text
+  Output: The last lesson in this class (not this swirl course) will be over ggplot.
 
 - Class: cmd_question
   Output: Load the included data frame cars with data(cars).
@@ -198,9 +207,47 @@
   AnswerTests: any_of_exprs('hist(mtcars$mpg)', 'hist(x = mtcars$mpg)')
   Hint: Type hist(mtcars$mpg) to create the plot.
 
-# Not sure what a good lesson length is for this. 
-# Might add some information on saving plots.
-# Other functions that I use include identify().
+- Class: text
+  Output: In this lesson, you learned how to work with base graphics in R. If you want to explore other elements of base graphics, then this web page (http://www.ling.upenn.edu/~joseff/rstudy/week4.html) provides a useful overview.
+  
+- Class: text
+  Output:  "This final section will detail the usefulness, relevance, and application of what you just learned in this Swirl lesson."
+  
+- Class: text
+  Output: Like I mentioned near the beginning of this lesson I find base R graphics to be the best option to check if my data meets certain requirements for running statistical tests.
+  
+- Class: text
+  Output: I won't go into too much detail as to which tests require what, but just know that if statistics classes are in your future this will be extremely helpful.
+  
+- Class: cmd_question
+  Output: You've already created a scatterplot with the cars dataset. This example shows a clear linear relationship between the two variables. Type -- plot(cars) -- to remind yourself.
+  CorrectAnswer: plot(cars)
+  AnswerTests: omnitest(correctExpr='plot(cars)')
+  
+- Class: text
+  Output: Not all datasets make it obvious whether there is a linear relationship between two variables.  Depending on how many data points there are and how they're measured, you may not be able to easily identify a relationship.
+
+- Class: cmd_question
+  Output: Luckily, we can add a simulated line that represents what the perfect line would look like with our data. This is called the "Least Squares Regression Line".  Type -- abline(lm(dist ~ speed, data = cars)) -- to add a line to the cars graph you just remade.
+  CorrectAnswer: abline(lm(dist ~ speed, data = cars))
+  AnswerTests: omnitest(correctExpr='abline(lm(dist ~ speed, data = cars))')
+  
+- Class: text
+  Output: Good!  Generally, the steeper the line, the more likely there is a linear relationship between the variables.
 
 - Class: text
-  Output: In this lesson, you learned how to work with base graphics in R. The best place to go from here is to study the ggplot2 package. If you want to explore other elements of base graphics, then this web page (http://www.ling.upenn.edu/~joseff/rstudy/week4.html) provides a useful overview.
+  Output: In this lesson and the simulation lesson earlier you learned how to create a histogram and plot a normal curve on top of it, but again some data doesn't always make it easy to interpret.  There is another way to see if your histogram is normally distributed. It's called the qqplot.
+  
+- Class: cmd_question
+  Output: To begin creating your qqplot type -- qqnorm(mtcars$mpg).
+  CorrectAnswer: qqnorm(mtcars$mpg)
+  AnswerTests: omnitest(correctExpr='qqnorm(mtcars$mpg)')
+  
+- Class: cmd_question
+  Output: The more dots that fall on or near a straight line, the more normally distributed or shaped your data is. You may rightfully be asking, "What line?" Let's add it by typing -- qqline(mtcars$mpg).
+  CorrectAnswer: qqline(mtcars$mpg)
+  AnswerTests: omnitest(correctExpr='qqline(mtcars$mpg)')
+  
+- Class: text
+  Output: There are certainly some normality issues with the mpg variable in the mtcars dataset.
+
