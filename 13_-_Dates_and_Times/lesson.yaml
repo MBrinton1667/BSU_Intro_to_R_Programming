@@ -191,4 +191,7 @@
 
 - Class: text
   Output: In this lesson, you learned how to work with dates and times in R. While it is important to understand the basics, if you find yourself working with dates and times often, you may want to check out the lubridate package by Hadley Wickham.
+  
+  - Class: text
+  Output:  The material in this lesson is rather straight-forward so there is no application section.
 
