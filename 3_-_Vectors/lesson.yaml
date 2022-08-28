@@ -304,3 +304,6 @@
   Output:  Type responses to see the fruits of your labor.
   CorrectAnswer: responses
   AnswerTests: omnitest(correctExpr='responses')
+  
+- Class: text
+  Output: Hooray!
