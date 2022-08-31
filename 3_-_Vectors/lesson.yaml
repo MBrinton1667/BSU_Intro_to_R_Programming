@@ -289,7 +289,7 @@
   Hint: We're repeating A B C D 10 times so the correct code would be Q_Sub <- rep(c("A", "B", "C", "D"), times = 10)
   
 - Class: cmd_question
-  Output:  Now we'll use the paste() function to combine these two vectors into one vector.  Combine the two vectors and separate them by a dash "-".  Name this new vector column_names
+  Output:  Now we'll use the paste() function to combine these two vectors (Q_Number and Q_Sub in that order) into one vector.  Combine the two vectors and separate them by a dash "-".  You will not need to put these stored vectors in double quotes. Name this new vector column_names.
   CorrectAnswer: column_names <- paste(Q_Number, Q_Sub, sep = "-")
   AnswerTests: omnitest(correctExpr='column_names <- paste(Q_Number, Q_Sub, sep = "-")')
   Hint: "Be sure your commas, capitalizations, and double quotes are all correct."
