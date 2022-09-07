@@ -225,7 +225,7 @@
   Output:  Okay, I was joking, not having to manually scan this much data is what computers were designed for I'm sure.  So let's have R do it for us using extraction.
   
 - Class: cmd_question
-  Output: We just need to tell R to extract any values that are less than 8 or greater than 10. Using what you learned in this lesson, first extract from outliers any values in outliers that are less than 8.
+  Output: We just need to tell R to extract any values that are less than 8 or greater than 12. Using what you learned in this lesson, first extract from outliers any values in outliers that are less than 8.
   CorrectAnswer: outliers[outliers < 8]
   AnswerTests: omnitest(correctExpr='outliers[outliers < 8]')
   Hint: The correct code is outliers[outliers < 8]
