@@ -298,7 +298,7 @@
   
 - Class: cmd_question
   Output: Now to use logical operators to find our perfect car!  Type -- mtcars[which(mpg),] -- to see which cars get at least 18 miles per gallon.  Don't forget the comma at the end there!
-  CorrectAnswer: "mtcars[which(mpg),]"
+  CorrectAnswer: "wt <- mtcars$wt < 3"
   AnswerTests: omnitest(correctExpr='mtcars[which(mpg),]')
   Hint: "The correct expression would be: mtcars[which(mpg),]"
   
