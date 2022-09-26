@@ -141,44 +141,39 @@
   Output: Make sure to save your script before you type submit().
   AnswerTests: test_func3()
   Hint: "Remember to set the appropriate default values!"
-  Script: remainder.R
+  Script: default_mean.R
 
 - Class: cmd_question
-  Output: "Let's do some testing of the remainder function. Run remainder(5)
+  Output: "Let's do some testing of our new my_mean function. Run my_mean(c(1, 5, NA, 5))
     and see what happens."
-  CorrectAnswer: remainder(5)
-  AnswerTests: omnitest(correctExpr='remainder(5)')
-  Hint: "Let's test your remainder function by running: remainder(5)"
+  CorrectAnswer: my_mean(c(1, 5, NA, 5))
+  AnswerTests: omnitest(correctExpr='my_mean(c(1, 5, NA, 5))')
+  Hint: "Let's test your function by running: my_mean(c(1, 5, NA, 5))"
 
 - Class: text
-  Output: "Let's take a moment to examine what just happened. You provided one
-    argument to the function, and R matched that argument to 'num' since 'num'
-    is the first argument. The default value for 'divisor' is 2, so the function
-    used the default value you provided."
+  Output: It worked! Now whenever you take the mean of any vector passed through my_mean, the missing data will be ignored by default.
 
 - Class: cmd_question
-  Output: "Now let's test the remainder function by providing two arguments.
-    Type: remainder(11, 5) and let's see what happens."
-  CorrectAnswer: remainder(11, 5)
-  AnswerTests: omnitest(correctExpr='remainder(11, 5)')
-  Hint: "Let's test your remainder function by running: remainder(11, 5)"
+  Output: You can also overwrite default arguments.  One handy thing about the function we just made is that it can also be a quick way to determine if there is any missing data in a vector.  If we change our second argument to rm = F and our vector has missing data, we'll get NA as a result. Try it now using the same vector as the previous question (press the up arrow key)
+  CorrectAnswer: my_mean(c(1, 5, NA, 5), rm = F)
+  AnswerTests: omnitest(correctExpr='my_mean(c(1, 5, NA, 5), rm = F)')
+  Hint: "Let's test your function by running: my_mean(c(1, 5, NA, 5), rm = F)"
 
-- Class: text
-  Output: "Once again, the arguments have been matched appropriately.  Entering 5 as the second argument overwrote the default 2 value."
+- Class: cmd_question
+  Output: And just to hammer it all home, remove rm = F and run my_mean(c(1, 5, NA, 5)) one more time.
+  CorrectAnswer: my_mean(c(1, 5, NA, 5))
+  AnswerTests: omnitest(correctExpr='my_mean(c(1, 5, NA, 5))')
+  Hint: "Let's test your function by running: my_mean(c(1, 5, NA, 5))"
 
 - Class: cmd_question
   Output: "You can also explicitly specify arguments in a function. When you
     explicitly designate argument values by name, the ordering of the arguments
     becomes unimportant. You can try this out by typing: 
-    remainder(divisor = 11, num = 5)."
-  CorrectAnswer: remainder(divisor = 11, num = 5)
-  AnswerTests: omnitest(correctExpr='remainder(divisor = 11, num = 5)')
+    my_mean(rm = F, my_vector = c(1, 5, NA, 5))."
+  CorrectAnswer: my_mean(rm = F, my_vector = c(1, 5, NA, 5))
+  AnswerTests: omnitest(correctExpr='my_mean(rm = F, my_vector = c(1, 5, NA, 5))')
   Hint: "Order no longer matters when you explicity state argument values! Test
-  this out by typing: remainder(divisor = 11, num = 5)"
-
-- Class: text
-  Output: "As you can see, there is a significant difference between
-    remainder(11, 5) and remainder(divisor = 11, num = 5)!"
+  this out by typing: my_mean(rm = F, my_vector = c(1, 5, NA, 5))"
     
 - Class: text
   Output:  Explicitly stating argument values can come in real handy when a function can take a lot of different arguments and you don't have the order memorized or if you only want to use the default for some of the arguments.

@@ -35,10 +35,10 @@ test_func2 <- function() {
 
 test_func3 <- function() {
   try({
-    func <- get('remainder', globalenv())
-    t1 <- identical(func(9, 4), 9 %% 4)
-    t2 <- identical(func(divisor = 5, num = 2), 2 %% 5)
-    t3 <- identical(func(5), 5 %% 2)
+    func <- get('my_mean', globalenv())
+    t1 <- identical(func(9), mean(9))
+    t2 <- identical(func(1:10), mean(1:10))
+    t3 <- identical(func(c(-5, -2, NA, 4, 10)), mean(c(-5, -2, NA, 4, 10), na.rm = T))
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
   exists('ok') && isTRUE(ok)
@@ -66,15 +66,6 @@ test_func5 <- function() {
   exists('ok') && isTRUE(ok)
 }
 
-test_func6 <- function() {
-  try({
-    func <- get('mad_libs', globalenv())
-    t1 <- identical(func(place = "Baltimore", adjective = "smelly", noun = "Roger Peng statue"), "News from Baltimore today where smelly students took to the streets in protest of the new Roger Peng statue being installed on campus.")
-    t2 <- identical(func(place = "Washington", adjective = "angry", noun = "Shake Shack"), "News from Washington today where angry students took to the streets in protest of the new Shake Shack being installed on campus.")
-    ok <- all(t1, t2)
-  }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
-}
 
 test_func7 <- function() {
   try({
