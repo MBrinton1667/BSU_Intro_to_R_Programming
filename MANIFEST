@@ -5,11 +5,12 @@
 5_-_Subsetting_Vectors
 6_-_Matrices_and_Data_Frames
 7_-_Logic
+
 9_-_lapply_and_sapply
 10_-_vapply_and_tapply
 11_-_Looking_at_Data
 12_-_Simulation
-13_-_Dates_and_Times
+
 14_-_Base_Graphics
 15_-_Manipulating_Data_with_dplyr
 16_-_Grouping_and_Chaining_with_dplyr
