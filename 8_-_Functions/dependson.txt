@@ -1,4 +1,0 @@
-priceR
-rvest
-stringi
-dplyr
