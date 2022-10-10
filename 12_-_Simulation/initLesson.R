@@ -12,6 +12,7 @@ x <- c(0.656, 0.678, 0.733, 0.752, 0.781, 0.812, 0.817, 0.838, 0.840, 0.854, 0.8
 
 friends_dice <- function()
 {
+  set.seed(8008)
   roll <- replicate(2, sample(1:6, 1000, prob=c(0.12, 0.13, 0.07, 0.23, .22, .23), replace = T))
   roll_sum <- apply(roll, 1, sum)
   hist(roll_sum, col = "pink", ylim = c(0, 200))

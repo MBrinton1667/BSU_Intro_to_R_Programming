@@ -187,7 +187,7 @@
   Output: A major portion of statistics is determining if one set of numbers differs significantly from another set of numbers or a theoretical (simulated) set of numbers.
   
 - Class: text
-  Output: It's fake story time.  Your friend just got back from Vegas after losing horribly at the craps table.  They were so furious that they stole the two pink dice from the casino.  Knowing you're in an R class, they pleaded with you to see if their dice were faulty with statistics and simulations.
+  Output: It's fake story time.  Your friend just got back from Vegas after losing horribly at the craps table.  They were so furious that they stole the two pink dice from the casino.  Knowing you're in an R class, they pleaded with you to see if their dice were faulty. Time to simulate.
   
 - Class: cmd_question
   Output: Because you love your friend so much, you decided to roll the two dice they gave you 1000 times. You recorded the sum of the two dice after each roll.  The resulting distribution is in the convenient function friends_dice().  Type friends_dice() to see the results of your hard work.
